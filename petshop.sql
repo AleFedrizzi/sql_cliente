@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Tempo de geração: 27-Ago-2021 às 13:24
+-- Tempo de geração: 27-Ago-2021 às 13:58
 -- Versão do servidor: 5.7.32
 -- versão do PHP: 7.4.12
 
@@ -31,7 +31,7 @@ CREATE TABLE `cliente` (
   `nomeCliente` varchar(100) NOT NULL,
   `cpfCliente` varchar(14) NOT NULL,
   `nomepetCliente` varchar(50) NOT NULL,
-  `racapetCliente` varchar(50) NOT NULL,
+  `especiepetCliente` varchar(50) NOT NULL,
   `mascpetCliente` int(1) NOT NULL,
   `fempetCliente` int(1) NOT NULL,
   `cepCliente` varchar(9) NOT NULL,
@@ -49,8 +49,12 @@ CREATE TABLE `cliente` (
 -- Extraindo dados da tabela `cliente`
 --
 
-INSERT INTO `cliente` (`idCliente`, `nomeCliente`, `cpfCliente`, `nomepetCliente`, `racapetCliente`, `mascpetCliente`, `fempetCliente`, `cepCliente`, `endCliente`, `complCliente`, `bairroCliente`, `cidadeCliente`, `estadoCliente`, `telCliente`, `profCliente`, `nascCliente`) VALUES
-(1, 'Ana Maria', '000.000.000.00', 'Print', 'Papillon', 0, 1, '02040-090', 'Rua Agente Gomes, 161', 'apto 55', 'Jardim São Paulo', 'São Paulo', 'São Paulo', '11 97177-5999', 'Jornalista', '10/04/1971');
+INSERT INTO `cliente` (`idCliente`, `nomeCliente`, `cpfCliente`, `nomepetCliente`, `especiepetCliente`, `mascpetCliente`, `fempetCliente`, `cepCliente`, `endCliente`, `complCliente`, `bairroCliente`, `cidadeCliente`, `estadoCliente`, `telCliente`, `profCliente`, `nascCliente`) VALUES
+(1, 'Ana Maria', '000.000.000.00', 'Print', 'Cao', 0, 1, '02040-090', 'Rua Agente Gomes, 161', 'apto 55', 'Jardim São Paulo', 'São Paulo', 'São Paulo', '11 97177-5999', 'Jornalista', '10/04/1971'),
+(2, 'Maria Madalena', '000.000.000.00', 'Bolacha', 'Cão', 0, 1, '02040-092', 'Rua São Marcos, 215', '', 'Santana', 'São Paulo', 'São Paulo', '11 97177-5999', 'Empresária', '10/04/1971'),
+(3, 'José Henrique', '000.000.000.00', 'Hercules', 'Calopsita', 0, 1, '02040-092', 'Rua São Marcos, 215', '', 'Mairinque', 'São Paulo', 'São Paulo', '11 97177-5999', 'Empresária', '10/04/1971'),
+(4, 'Jonatas Araujo', '000.000.000.00', 'Malhada', 'Gato', 1, 0, '02040-092', 'Rua Joa Araujo, 126', '', 'Carapicuiba', 'São Paulo', 'São Paulo', '11 97177-5999', 'Advogada', '10/04/1971'),
+(5, 'Bruno Pereira', '000.000.000.00', 'Mixico', 'Gato', 0, 1, '02040-092', 'Rua Joa Araujo, 126', '', 'Carapicuiba', 'São Paulo', 'São Paulo', '11 97177-5999', 'Estudante', '10/04/1971');
 
 --
 -- Índices para tabelas despejadas
@@ -70,7 +74,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `idCliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idCliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
